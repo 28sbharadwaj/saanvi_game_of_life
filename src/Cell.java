@@ -5,8 +5,7 @@ public class Cell {
     private final int size;
     private final int row;
     private final int column;
-    private final CellState cellState;
-    private final MooreRules rules;
+
 
     public Cell(int x, int y, int size, int row, int column){
 
