@@ -35,7 +35,12 @@ public class Main extends PApplet{
 
     public void draw(){
         background(255);
-        
+        for(int r = 0; r < NUM_ROWS; r++){
+            for(int col = 0; col < NUM_COLUMNS; col++){
+                c[r][col].display();
+            }
+        }
+    }
     }
 
 }
