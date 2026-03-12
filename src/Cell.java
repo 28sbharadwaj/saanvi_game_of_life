@@ -39,7 +39,7 @@ public class Cell {
         if(cellState == CellState.ALIVE){
             cellState = CellState.DEAD;
         } else {
-            fillColor = 255; // white
+            cellState = CellState.ALIVE;
         }
     }
 
