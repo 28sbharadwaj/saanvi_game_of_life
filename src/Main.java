@@ -47,6 +47,9 @@ public class Main extends PApplet{
         int col = mouseX / CELL_SIZE;
         int row = mouseY / CELL_SIZE;
 
+        if(row >= 0 && row < NUM_ROWS && col >= 0 && col < NUM_COLUMNS){
+            c[row][col].handleClick();
+
     }
 
 }
