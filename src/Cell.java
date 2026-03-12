@@ -36,8 +36,8 @@ public class Cell {
     }
 
     public void handleClick(){
-        if(fillColor == 255){
-            fillColor = 0; // black
+        if(cellState == CellState.ALIVE){
+            cellState = CellState.DEAD;
         } else {
             fillColor = 255; // white
         }
