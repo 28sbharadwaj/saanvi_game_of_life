@@ -22,8 +22,9 @@ public class Main extends PApplet{
     public void setup(){
         app = this;
         c = new Cell[NUM_ROWS][NUM_COLUMNS];
-        for(int r = 0; r < NUM_ROWS; r++){
-            for(int col = 0; col < NUM_COLUMNS; col++){
+        for (int r = NUM_ROWS - 1; r >= 0; r--) {
+            int col;
+            for (col = 0; col < NUM_COLUMNS; col++) {
 
                 int x = col * CELL_SIZE;
                 int y = r * CELL_SIZE;
