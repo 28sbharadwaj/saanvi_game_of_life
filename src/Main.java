@@ -6,6 +6,8 @@ public class Main extends PApplet{
     final int NUM_COLUMNS = 100;
     final int CELL_SIZE = 10;
 
+    private Cell[][] c;
+
     public static void main(String[] args){
         PApplet.main("Main");
 
