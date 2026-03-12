@@ -8,7 +8,8 @@ public class Cell {
     private final CellState cellState;
     private final MooreRules rules;
 
-    Cell(int x, int y, int size, int row, int column, CellState cellState, MooreRules rules){
+    public Cell(int x, int y, int size, int row, int column){
+
         this.x = x;
         this.y = y;
         this.size = size;
