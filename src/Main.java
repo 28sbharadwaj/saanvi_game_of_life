@@ -19,7 +19,11 @@ public class Main extends PApplet{
         int test = 1;
     }
 
-    public void setup(){}
+    public void setup(){
+        app = this;
+        c = new Cell[NUM_ROWS][NUM_COLUMNS];
+
+    }
 
     public void draw(){
 
