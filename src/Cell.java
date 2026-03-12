@@ -31,7 +31,13 @@ public class Cell {
         Main.app.rect(x, y, size, size);
     }
 
-    public void handleClick(){}
+    public void handleClick(){
+        if(fillColor == 255){
+            fillColor = 0; // black
+        } else {
+            fillColor = 255; // white
+        }
+    }
 
     private int countLiveNeighbors(Cell[][] cells){}
 }
