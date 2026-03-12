@@ -6,6 +6,7 @@ public class Cell {
     private final int row;
     private final int column;
     private CellState cellState;
+    private int fillColor;
 
 
     public Cell(int x, int y, int size, int row, int column){
