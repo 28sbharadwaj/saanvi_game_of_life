@@ -42,6 +42,11 @@ public class Main extends PApplet{
             }
         }
     }
+
+    public void mouseClicked(){
+        int col = mouseX / CELL_SIZE;
+        int row = mouseY / CELL_SIZE;
+
     }
 
 }
