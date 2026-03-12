@@ -16,6 +16,8 @@ public class Cell {
         this.size = size;
         this.row = row;
         this.column = column;
+        this.cellState = CellState.DEAD;
+        this.fillColor = 255;
     }
 
     public void applyRules(Cell[][] cells){}
