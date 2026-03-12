@@ -21,7 +21,18 @@ public class Cell {
 
     public void evolve(){}
 
-    public void display(){}
+    public void display(){
+
+        if(cellState == CellState.ALIVE){
+            Main.app.fill(0);
+        }
+        else{
+            Main.app.fill(255);
+        }
+        Main.app.stroke(0);
+
+        Main.app.rect(x, y, size, size);
+    }
 
     public void handleClick(){}
 
