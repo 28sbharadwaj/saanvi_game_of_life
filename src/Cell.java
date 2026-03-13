@@ -9,7 +9,7 @@ public class Cell {
     private MooreRules rules;
 
 
-    public Cell(int x, int y, int size, int row, int column){
+    public Cell(int x, int y, int size, int row, int column, CellState cellState, MooreRules rules) {
 
         this.x = x;
         this.y = y;
