@@ -37,6 +37,17 @@ public class Main extends PApplet{
 
     public void draw(){
         background(255);
+
+        if(doEvolve){
+            for(int r = 1; r < NUM_ROWS - 1; r++){
+                for(int col = 1; col < NUM_COLUMNS - 1; col++){
+                    c[r][col].applyRules(c);
+                }
+            }
+
+            evolve();
+        }
+
         for(int r = 1; r < NUM_ROWS - 1; r++){
             for(int col = 1; col < NUM_COLUMNS - 1; col++){
                 c[r][col].applyRules(c);
