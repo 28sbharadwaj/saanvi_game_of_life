@@ -69,7 +69,7 @@ public class Main extends PApplet{
 
         if(row >= 0 && row < NUM_ROWS && col >= 0 && col < NUM_COLUMNS){
             c[row][col].handleClick();
-
+        }
     }
 
     public void evolve() {
