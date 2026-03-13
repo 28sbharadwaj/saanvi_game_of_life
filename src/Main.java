@@ -140,6 +140,12 @@ public class Main extends PApplet{
         doEvolve = !doEvolve;
     }
 
+    /**
+     * adds a glider pattern to the grid
+     * each method is just a different direction: downright, downleft, upleft, upright
+     * row and col tell where to place the top-left corner of the pattern
+     * sets the right cells to alive so the glider can move when the simulation runs
+     */
     public void addGlider(int startRow, int startCol) {
         c[startRow + 0][startCol + 1].cellState = CellState.ALIVE;
         c[startRow + 1][startCol + 2].cellState = CellState.ALIVE;
