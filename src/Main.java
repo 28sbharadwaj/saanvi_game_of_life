@@ -92,4 +92,28 @@ public class Main extends PApplet{
         c[startRow + 2][startCol + 2].cellState = CellState.ALIVE;
     }
 
+    public void addGliderGoingLeft(int row, int col) {
+        c[row + 0][col + 1].cellState = CellState.ALIVE;
+        c[row + 1][col + 0].cellState = CellState.ALIVE;
+        c[row + 1][col + 1].cellState = CellState.ALIVE;
+        c[row + 1][col + 2].cellState = CellState.ALIVE;
+        c[row + 2][col + 0].cellState = CellState.ALIVE;
+    }
+
+    public void addGliderUpRight(int row, int col) {
+        c[row + 0][col + 0].cellState = CellState.ALIVE;
+        c[row + 0][col + 1].cellState = CellState.ALIVE;
+        c[row + 0][col + 2].cellState = CellState.ALIVE;
+        c[row + 1][col + 2].cellState = CellState.ALIVE;
+        c[row + 2][col + 1].cellState = CellState.ALIVE;
+    }
+
+    public void addGliderUpLeft(int row, int col) {
+        c[row + 0][col + 1].cellState = CellState.ALIVE;
+        c[row + 1][col + 0].cellState = CellState.ALIVE;
+        c[row + 1][col + 1].cellState = CellState.ALIVE;
+        c[row + 1][col + 2].cellState = CellState.ALIVE;
+        c[row + 2][col + 2].cellState = CellState.ALIVE;
+    }
+
 }
