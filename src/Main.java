@@ -101,6 +101,12 @@ public class Main extends PApplet{
         }
     }
 
+    /**
+     * called when the mouse is clicked
+     * figures out which cell you clicked based on mouseX and mouseY
+     * also tells that cell to toggle between alive and dead
+     */
+
     public void mouseClicked(){
         int col = mouseX / CELL_SIZE;
         int row = mouseY / CELL_SIZE;
