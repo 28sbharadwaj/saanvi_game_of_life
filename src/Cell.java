@@ -47,7 +47,28 @@ public class Cell {
         }
     }
 
-    private int countLiveNeighbors(Cell[][] cells){}
+    private int countLiveNeighbors(Cell[][] cells){
+        int count = 0;
+        int rows = cells.length;
+        int columns = cells[0].length;
+
+        for (int dr = -1; dr <= 1; dr++) {
+            for (int dc = -1; dc <= 1; dc++) {
+                if (dr == 0 && dc == 0) continue;
+                int r = row + dr;
+                int c = column + dc;
+                if (r >= 0 && r < rows && c >= 0 && c < columns) {
+                    CellState neighborState = cells[r][c].cellState;
+                    if (neighborState == CellState.ALIVE || neighborState == CellState.WILL_DIE) {
+                        count++;
+                    }
+                }
+            }
+
+        }
+        return count;
+    }
+
 }
 
 
