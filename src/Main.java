@@ -130,6 +130,12 @@ public class Main extends PApplet{
         }
     }
 
+    /**
+     * called when any key is pressed
+     * just flips doEvolve true or false
+     * so you can start or stop the simulation with a key
+     **/
+
     public void keyPressed(){
         doEvolve = !doEvolve;
     }
