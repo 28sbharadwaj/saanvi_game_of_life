@@ -53,4 +53,11 @@ public class Main extends PApplet{
 
     }
 
+    public void evolve() {
+        for (int r = 1; r < NUM_ROWS - 1; r++) {
+            for (int col = 1; col < NUM_COLUMNS - 1; col++) {
+                c[r][col].evolve();
+            }
+        }
+    }
 }
