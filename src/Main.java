@@ -116,6 +116,12 @@ public class Main extends PApplet{
         }
     }
 
+    /**
+     * goes through all the inside cells and tells them to update to their next state
+     * makes will_die become dead and will_revive become alive
+     * basically moves the simulation to the next generation
+     */
+
     public void evolve() {
         for (int r = 1; r < NUM_ROWS - 1; r++) {
             for (int col = 1; col < NUM_COLUMNS - 1; col++) {
