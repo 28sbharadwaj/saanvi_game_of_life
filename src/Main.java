@@ -24,6 +24,12 @@ public class Main extends PApplet{
         int test = 1;
     }
 
+    /** public void setup: this initializes the canvas and the game grid
+     * it also sets up the canvas reference and creates the cells array
+     * it initializes all cells as dead, and adds multiple gliders
+     * the gliders are in different directions at positions relative to the grid size.
+     */
+
     public void setup(){
         app = this;
         c = new Cell[NUM_ROWS][NUM_COLUMNS];
