@@ -33,6 +33,7 @@ public class Main extends PApplet{
                 c[r][col] = new Cell(x, y, CELL_SIZE, r, col, CellState.DEAD, rules);
             }
         }
+        addGlider(1, 1);
     }
 
     public void draw(){
