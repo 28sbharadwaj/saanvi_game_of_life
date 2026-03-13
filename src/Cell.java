@@ -43,6 +43,11 @@ public class Cell {
         }
     }
 
+    /**
+     * shows the cell on the canvas
+     * black if alive or will_die white if dead or will_survive
+     * draws a rectangle at the cell's x and y with its size
+     */
     public void display(){
         if(cellState == CellState.ALIVE || cellState == CellState.WILL_DIE){
             Main.app.fill(0);
