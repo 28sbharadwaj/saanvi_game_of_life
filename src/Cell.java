@@ -20,7 +20,11 @@ public class Cell {
         this.rules = rules;
     }
 
-    public void applyRules(Cell[][] cells){}
+    public void applyRules(Cell[][] cells){
+        int liveNeighbors = countLiveNeighbors(cells);
+
+        CellState nextState = rules.applyRules(cellState, liveNeighbors);
+        cellState = nextState;
 
     public void evolve(){}
 
