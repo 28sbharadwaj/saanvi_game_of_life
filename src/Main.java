@@ -67,6 +67,13 @@ public class Main extends PApplet{
 
     }
 
+    /** main draw loop for the sketch
+     * if doEvolve is true it updates the rules and evolves the middle cells
+     * then it always applies rules evolves and shows all cells
+     * this way when you click a cell it changes color immediately
+     */
+
+
     public void draw(){
         background(255);
 
