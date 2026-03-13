@@ -54,6 +54,12 @@ public class Cell {
         Main.app.rect(x, y, size, size);
     }
 
+
+    /**
+     * toggles the cell between alive and dead when you click it
+     * if it's alive or will_die it becomes dead
+     * if it's dead or will_revive it becomes alive
+     */
     public void handleClick(){
         if(cellState == CellState.ALIVE || cellState == CellState.WILL_DIE){
             cellState = CellState.DEAD;
