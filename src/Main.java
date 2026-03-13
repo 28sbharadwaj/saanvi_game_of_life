@@ -29,7 +29,7 @@ public class Main extends PApplet{
                 int x = col * CELL_SIZE;
                 int y = r * CELL_SIZE;
 
-                c[r][col] = new Cell(x, y, CELL_SIZE, r, col);
+                c[r][col] = new Cell(x, y, CELL_SIZE, r, col, CellState.DEAD, rules);
             }
         }
     }
