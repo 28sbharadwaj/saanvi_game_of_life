@@ -103,7 +103,7 @@ public class Main extends PApplet{
     public void addGliderUpRight(int row, int col) {
         c[row][col].cellState = CellState.ALIVE;
         c[row][col + 1].cellState = CellState.ALIVE;
-        c[row + 0][col + 2].cellState = CellState.ALIVE;
+        c[row][col + 2].cellState = CellState.ALIVE;
         c[row + 1][col + 2].cellState = CellState.ALIVE;
         c[row + 2][col + 1].cellState = CellState.ALIVE;
     }
