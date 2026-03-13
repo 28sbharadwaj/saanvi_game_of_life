@@ -40,7 +40,7 @@ public class Cell {
     }
 
     public void handleClick(){
-        if(cellState == CellState.ALIVE){
+        if(cellState == CellState.ALIVE || cellState == CellState.WILL_DIE){
             cellState = CellState.DEAD;
         } else {
             cellState = CellState.ALIVE;
