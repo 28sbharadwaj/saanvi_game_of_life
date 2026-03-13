@@ -21,6 +21,11 @@ public class Cell {
     }
 
     public void applyRules(Cell[][] cells){
+        if(cellState != CellState.ALIVE && cellState != CellState.DEAD){
+            return;
+        }
+
+
         int liveNeighbors = countLiveNeighbors(cells);
 
         CellState nextState = rules.applyRules(cellState, liveNeighbors);
