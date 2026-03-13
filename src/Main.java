@@ -5,6 +5,7 @@ public class Main extends PApplet{
     final int NUM_ROWS = 50;
     final int NUM_COLUMNS = 100;
     final int CELL_SIZE = 10;
+    private boolean doEvolve = false;
 
     private Cell[][] c;
 
