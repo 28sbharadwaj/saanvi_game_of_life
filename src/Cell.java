@@ -20,6 +20,11 @@ public class Cell {
         this.rules = rules;
     }
 
+    /**
+     * figures out what the cell should do next based on neighbors
+     * if the cell is already in a temporary state it does nothing
+     * otherwise it counts live neighbors and uses rules to set will_die or will_revive
+     */
     public void applyRules(Cell[][] cells){
         if(cellState != CellState.ALIVE && cellState != CellState.DEAD){
             return;
