@@ -76,5 +76,12 @@ public class Main extends PApplet{
         doEvolve = !doEvolve;
     }
 
+    public void addGlider(int startRow, int startCol) {
+        c[startRow + 0][startCol + 1].cellState = CellState.ALIVE;
+        c[startRow + 1][startCol + 2].cellState = CellState.ALIVE;
+        c[startRow + 2][startCol + 0].cellState = CellState.ALIVE;
+        c[startRow + 2][startCol + 1].cellState = CellState.ALIVE;
+        c[startRow + 2][startCol + 2].cellState = CellState.ALIVE;
+    }
 
 }
