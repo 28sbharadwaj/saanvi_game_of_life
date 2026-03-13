@@ -54,6 +54,13 @@ public class Main extends PApplet{
                 c[r][col].applyRules(c);
             }
         }
+
+        for(int r = 0; r < NUM_ROWS; r++){
+            for(int col = 0; col < NUM_COLUMNS; col++){
+                c[r][col].evolve();
+                c[r][col].display();
+            }
+        }
     }
 
     public void mouseClicked(){
