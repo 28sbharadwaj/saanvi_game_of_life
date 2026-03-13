@@ -71,4 +71,10 @@ public class Main extends PApplet{
             }
         }
     }
+
+    public void keyPressed(){
+        doEvolve = !doEvolve;
+    }
+
+
 }
