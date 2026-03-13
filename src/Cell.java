@@ -26,7 +26,15 @@ public class Cell {
         CellState nextState = rules.applyRules(cellState, liveNeighbors);
         cellState = nextState;
 
-    public void evolve(){}
+    }
+
+    public void evolve() {
+        if (cellState == CellState.WILL_DIE) {
+            cellState = CellState.DEAD;
+        } else if (cellState == CellState.WILL_REVIVE) {
+            cellState = CellState.ALIVE;
+        }
+    }
 
     public void display(){
         if(cellState == CellState.ALIVE || cellState == CellState.WILL_DIE){
