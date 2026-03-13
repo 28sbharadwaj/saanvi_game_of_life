@@ -13,8 +13,12 @@ public class Main extends PApplet{
         PApplet.main("Main");
 
     }
-
-    public void settings(){
+/**
+ * public void settings sets up the canvas size and pixel density for the canvas
+ * the width and height are determined by the variables NUM_COLUMNS, NUM_ROWS, and CELL_SIZE
+ * these represent the number of rows, columns and size of each cell
+ **/
+    public void settings() {
         size(NUM_COLUMNS * CELL_SIZE, NUM_ROWS * CELL_SIZE);
         pixelDensity(1);
         int test = 1;
