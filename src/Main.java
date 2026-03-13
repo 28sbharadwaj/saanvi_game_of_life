@@ -33,7 +33,28 @@ public class Main extends PApplet{
                 c[r][col] = new Cell(x, y, CELL_SIZE, r, col, CellState.DEAD, rules);
             }
         }
-        addGlider(1, 1);
+        addGlider(NUM_ROWS - NUM_ROWS + 1, NUM_COLUMNS - NUM_COLUMNS + 1);
+        addGlider(NUM_ROWS / 10, NUM_COLUMNS / 10);
+        addGlider(NUM_ROWS / 5, NUM_COLUMNS / 3);
+        addGlider(NUM_ROWS * 7 / 10, NUM_COLUMNS * 1 / 2);
+        addGlider(NUM_ROWS / 10, NUM_COLUMNS / 5);
+        addGlider(NUM_ROWS / 3, NUM_COLUMNS / 4);
+
+        addGliderGoingLeft(NUM_ROWS / 50, NUM_COLUMNS - 10);
+        addGliderGoingLeft(NUM_ROWS / 25, NUM_COLUMNS - 20);
+        addGliderGoingLeft(NUM_ROWS / 2, NUM_COLUMNS / 3);
+        addGliderGoingLeft(NUM_ROWS * 4 / 5, NUM_COLUMNS - 20);
+        addGliderGoingLeft(NUM_ROWS * 9 / 10, NUM_COLUMNS - 30);
+
+
+
+        addGliderUpRight(NUM_ROWS / 2, NUM_COLUMNS / 3);
+        addGliderUpRight(NUM_ROWS * 9 / 10, NUM_COLUMNS / 50);
+
+        addGliderUpLeft(NUM_ROWS * 7 / 10, NUM_COLUMNS / 2);
+        addGliderUpLeft(NUM_ROWS * 4 / 5, NUM_COLUMNS / 10);
+        addGliderUpLeft(NUM_ROWS / 2, NUM_COLUMNS / 3);
+
     }
 
     public void draw(){
