@@ -24,9 +24,10 @@ public class Cell {
         int liveNeighbors = countLiveNeighbors(cells);
 
         CellState nextState = rules.applyRules(cellState, liveNeighbors);
-        if (cellState == CellState.ALIVE || cellState == CellState.DEAD) {
-            cellState = nextState;
+        if (cellState != CellState.ALIVE && cellState != CellState.DEAD) {
+            return;
         }
+        cellState = nextState;
     }
 
     public void evolve() {
