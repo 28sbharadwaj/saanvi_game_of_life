@@ -35,6 +35,12 @@ public class Cell {
         cellState = rules.applyRules(cellState, liveNeighbors);
     }
 
+
+    /**
+     * updates the cell from temporary state to final state
+     * will_die becomes dead and will_revive becomes alive
+     * basically moves the cell to its next generation
+     */
     public void evolve() {
         if (cellState == CellState.WILL_DIE) {
             cellState = CellState.DEAD;
