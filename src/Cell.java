@@ -5,7 +5,7 @@ public class Cell {
     private final int size;
     private final int row;
     private final int column;
-    private CellState cellState;
+    public CellState cellState;
     private MooreRules rules;
 
 
@@ -29,8 +29,6 @@ public class Cell {
         if(cellState != CellState.ALIVE && cellState != CellState.DEAD){
             return;
         }
-
-
         int liveNeighbors = countLiveNeighbors(cells);
         cellState = rules.applyRules(cellState, liveNeighbors);
     }
@@ -61,7 +59,6 @@ public class Cell {
             Main.app.fill(255);
         }
         Main.app.stroke(0);
-
         Main.app.rect(x, y, size, size);
     }
 
@@ -78,7 +75,6 @@ public class Cell {
             cellState = CellState.ALIVE;
         }
     }
-
     private int countLiveNeighbors(Cell[][] cells){
         int count = 0;
         int rows = cells.length;

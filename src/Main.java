@@ -1,6 +1,7 @@
 import processing.core.PApplet;
 
-public class Main extends PApplet{
+
+public class Main extends PApplet {
     public static PApplet app;
     final int NUM_ROWS = 50;
     final int NUM_COLUMNS = 100;
@@ -18,10 +19,10 @@ public class Main extends PApplet{
  * the width and height are determined by the variables NUM_COLUMNS, NUM_ROWS, and CELL_SIZE
  * these represent the number of rows, columns and size of each cell
  **/
+
     public void settings() {
         size(NUM_COLUMNS * CELL_SIZE, NUM_ROWS * CELL_SIZE);
         pixelDensity(1);
-        int test = 1;
     }
 
     /** public void setup: this initializes the canvas and the game grid
@@ -30,8 +31,9 @@ public class Main extends PApplet{
      * the gliders are in different directions at positions relative to the grid size.
      */
 
-    public void setup(){
+    public void setup() {
         app = this;
+        MooreRules rules = new MooreRules(new int[]{3}, new int[]{2, 3});
         c = new Cell[NUM_ROWS][NUM_COLUMNS];
         for (int r = NUM_ROWS - 1; r >= 0; r--) {
             int col;
@@ -74,7 +76,7 @@ public class Main extends PApplet{
      */
 
 
-    public void draw(){
+    public void draw() {
         background(255);
 
         if(doEvolve){
@@ -83,12 +85,10 @@ public class Main extends PApplet{
                     c[r][col].applyRules(c);
                 }
             }
-
             evolve();
         }
-
-        for(int r = 1; r < NUM_ROWS - 1; r++){
-            for(int col = 1; col < NUM_COLUMNS - 1; col++){
+        for(int r = 0; r < NUM_ROWS; r++){
+            for(int col = 0; col < NUM_COLUMNS; col++){
                 c[r][col].applyRules(c);
             }
         }
